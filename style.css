@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.outer{
+    height: 100vh;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#switch:checked ~ .outer{
+    background: #688dbd
+}
+
+.outer .content{
+    display: flex;
+    max-width: 600px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#switch:checked ~ .outer .content{
+    background: #688dbd;
+    
+}
+
+.content .toggle{
+    position: absolute;
+    right: 15px;
+    top: 13px;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background: #688dbd;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#switch:checked ~ .outer .toggle{
+    background: #fff;
+}
+
+.toggle .circle{
+    height: 16px;
+    width: 16px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 3px;
+    transition: all 0.3s ease;
+}
+
+#switch:checked ~ .outer .circle{
+    margin-left: 22px;
+    background: #688dbd
+    
+}
+
+.content .image-box{
+    height: 232px;
+    width: 200px;
+    border-radius: 12px;
+    background: #688dbd;
+    padding: 4px;
+    
+}
+#switch:checked ~ .outer .image-box img{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    
+}
+
+.content .image-box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #fff;
+    
+}
+
+#switch:checked ~ .outer .image-box img{
+    border-color: transparent;
+    
+    
+}
+
+.content .details {
+    width: 58%;
+    margin: 10px 0px 20px 10px;
+    
+}
+#switch:checked ~ .outer .details{
+    color: #fff;
+}
+
+    
+
+.content .details .name{
+    font-size: 23px;
+    font-weight: 600;
+    
+}
+
+.content .details .job{
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+
+.content .details p{
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+.content .details button{
+    display: block;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    padding: 6px 14px;
+    margin-top: 16px;
+    background: #688dbd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+#switch:checked ~ .outer button{
+    color: #688dbd;
+    background: #fff;
+    
+}
+
+.details button:hover{
+    transform: scale(0.97);
+}
+
+.content .details .media-icons{
+    position: absolute;
+    bottom: 16px;
+    right: 15px; 
+}
+
+
+.details .media-icons a{
+    display: inline-flex;
+    margin: 0 4px;
+    color: #688dbd;
+    opacity: 0.7;
+    font-size: 16px;
+    text-decoration: none;
+    
+}
+
+#switch:checked ~ .outer .media-icons a{
+    color: #fff;
+    opacity: 1;
+    
+}
+
+.details .media-icons a:hover{
+    opacity: 1;
+}
+
+#switch{
+    display: none;
+}
